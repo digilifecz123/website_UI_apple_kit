@@ -1,14 +1,11 @@
-
-    
-
-
-    
- // moving screenshot hover header
-  //$('.screenshot-container').mouseover(function(){
-    //$(this).animate({ "left": "-=50px" }, "slow" );
-  //});
-
-
-    // slider
-   
-
+   $(document).ready(function() {
+     $('.bxslider').bxSlider({
+       auto: true,
+     });
+     var s = skrollr.init({
+       render: function(data) {
+         //Log the current scroll position.
+         $('#info').text(data.curTop);
+       }
+     });
+   });
